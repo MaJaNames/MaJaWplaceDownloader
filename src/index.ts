@@ -6,13 +6,13 @@ import './lib/pollyfil';
 const wPlace = new WPlace(true);
 
 const start = {
-    col: 1126,
-    row: 695
+    col: 1829,
+    row: 722
 } satisfies Chunk;
 
 const end = {
-    col: 1129,
-    row: 697
+    col: 1832,
+    row: 725
 } satisfies Chunk;
 
 (async () => {
