@@ -126,7 +126,7 @@ Clone your forked repo, and checkout the assets branch:
 
 ```bash
 git clone https://github.com/MaJaNames/MaJaWplaceDownloader.git
-cd WPlaceDownloader
+cd MaJaWPlaceDownloader
 git checkout assets
 ```
 
