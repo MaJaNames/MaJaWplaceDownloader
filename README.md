@@ -125,7 +125,7 @@ If you successfully setup the github actions, you should have some history of th
 Clone your forked repo, and checkout the assets branch:
 
 ```bash
-git clone <your-forked-repo-url> (On github, Code -> Local -> HTTPS/SSH and copy the URL)
+git clone https://github.com/MaJaNames/MaJaWplaceDownloader.git
 cd WPlaceDownloader
 git checkout assets
 ```
