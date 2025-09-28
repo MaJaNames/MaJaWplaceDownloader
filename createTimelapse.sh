@@ -8,13 +8,13 @@ rm -f frames/*.png
 
 i=0
 for h in $(git log --follow --format=%H -n 100 -- example.png | tac); do
-    git show "$h:./example.png" > "frames/$(printf "image%04d" $i).png"
+    git show "$h:./example.png" > "frames/$(printf "%04d" $i).png"
     i=$((i + 1))
 done
 
-ffmpeg -framerate 2 -i 'frames/image%04d.png' \
+ffmpeg -framerate 2 -i 'frames/%04d.png' \
   -vf "palettegen=reserve_transparent=1" -y palette.png
 
-ffmpeg -framerate 2 -i 'frames/image%04d.png' -i palette.png \
+ffmpeg -framerate 2 -i 'frames/%04d.png' -i palette.png \
   -lavfi "paletteuse=dither=bayer:diff_mode=rectangle" \
   -gifflags -transdiff -y timelapse.gif
