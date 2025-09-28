@@ -7,7 +7,7 @@ mkdir -p frames
 rm -f frames/*.png
 
 i=0
-for h in $(git log --follow --format=%H -- example.png | tac); do
+for h in $(git log --follow --format=%H -n 100 -- example.png | tac); do
     git show "$h:./example.png" > "frames/$(printf "image%04d" $i).png"
     i=$((i + 1))
 done
