@@ -4,6 +4,8 @@
 
 # Proudly modified by MaJaNames "Fraise". Thank you patrick11514.
 
+git pull
+
 mkdir -p frames
 
 rm -f frames/*.png

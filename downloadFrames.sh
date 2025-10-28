@@ -8,7 +8,8 @@ mkdir -p frames
 
 rm -f frames/*.png
 # read -t 5 -p "Please enter the amount of last X frames to be saved.(default: 100, 5s timeout)" AMOUNT
-AMOUNT=1000
+echo "Script is downloading all frames. Wait a bit"
+AMOUNT=10000
 
 i=0
 for h in $(git log --follow --format=%H -n $AMOUNT -- example.png | tac); do
